@@ -1,18 +1,27 @@
 {
-  "name": "cn-33-backend",
+  "name": "CN-33-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "development": "nodemon src/index.js"
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "development": "nodemon --exec babel-node --watch src ./src/index"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.8.2",
     "graphql": "^14.4.2",
     "mongoose": "^5.6.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "dotenv": "^8.1.0",
+    "nodemon": "^1.19.1"
   }
 }
